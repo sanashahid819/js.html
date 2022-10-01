@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label for="">name </label>
+<input type="text" name="" id="i_n">
+<br>
+<span id="s_n"></span>
+<br>
+    
+<label for="">email</label>
+<input type="text" name="" id="i_e">
+<br>
+<span id="s_e"></span>
+
+<br>
+<button type="submit" onclick="fun()"> submit</button>
+<br>
+<div id="main"></div>
+
+
+
+
+
+<script>
+
+function fun(){
+      var name = document.getElementById("i_n").value;
+      var email = document.getElementById("i_e").value;
+ if( name=="sana" && email=="sana@gmail.com"){
+    document.getElementById("main").innerHTML = "welcome "+name;
+    document.getElementById("s_n").innerHTML = "  ";
+    document.getElementById("s_e").innerHTML = " ";
+ }
+else if( name!=="sana" && email!="sana@gmail.com"){
+    document.getElementById("s_n").innerHTML = " name is not correct ";
+    document.getElementById("s_e").innerHTML = "  invalid email address ";
+    document.getElementById("main").innerHTML = " ";
+}
+
+else if( name!="sana" && email=="sana@gmail.com"){
+    document.getElementById("s_e").innerHTML = "  ";
+    document.getElementById("s_n").innerHTML = "name is not correct  ";
+    document.getElementById("main").innerHTML = " ";
+}
+
+else if( name="sana" && email!="sana@gmail.com"){
+    document.getElementById("s_e").innerHTML = " invalid email address ";
+    document.getElementById("s_n").innerHTML = "  ";
+    document.getElementById("main").innerHTML = " ";
+}
+
+
+
+//  else{ 
+//     document.getElementById("main").innerHTML = "email or name is incorrect";
+//  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
