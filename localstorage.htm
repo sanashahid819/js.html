@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">name</label>
+    <input type="text" id="inp">
+    <button type="submit" onclick="fun()">store</button>
+    <h2 id="head"></h2>
+
+    
+
+
+
+
+    <script>
+ function fun(){
+ var name =document.getElementById("inp").value;
+ localStorage.setItem("name",name);
+ document.getElementById("head").innerHTML = name;
+
+
+ }
+
+
+
+
+    </script>
+</body>
+</html>
